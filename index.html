@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. I don't know how to build a website</p>
-</body>
+    <head>
+        <title>Login Form</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Login Form</h3>
+                    <?php if(!empty($error_message)) { ?>
+                        <div class="alert alert-danger"><?php echo $error_message; ?></div>
+                    <?php } ?>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" required />
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
