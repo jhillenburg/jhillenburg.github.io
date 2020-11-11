@@ -1,8 +1,41 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #0530f2;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
 html {
     font-family: Arial;
     display: inline-block;
@@ -10,7 +43,11 @@ html {
 }
 
 h2 {
-    font-size: 3.0rem;
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 2.0rem;
 }
 
 body {
@@ -66,14 +103,23 @@ input:checked+.slider:before {
 </style>
 </head>
 <body>
+    <div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
     <br>
     <br>
-      <h2>Bolivar Storm Shelter</h2>
-      <br>
+    <h2>Storm Doors</h2>
+    <br>
+        
     <h3>Dunnegan Park</h3>
     <label class="switch">
     <input type="checkbox" onchange="updateOutput(this)" id="1" checked>
     <span class="slider"></span></label>
+    <br>
+    <br>
     <h3>Baseball Fields</h3>
     <label class="switch">
     <input type="checkbox" onchange="updateOutput(this)" id="2" checked><span class="slider"></span></label>    
