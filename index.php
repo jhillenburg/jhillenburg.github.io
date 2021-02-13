@@ -14,7 +14,7 @@
     <br>
     <h2>Storm Doors</h2>
     <br>
-    <?php
+<?php
 $apikey = '3d4dc18e7b4a7dd083338b11f3ac375f';
 
 $contents_europeana = fopen("http://api.openweathermap.org/data/2.5/weather?lat=37.613930&lon=-93.414619&appid=$apikey&mode=html&units=imperial", "r");
